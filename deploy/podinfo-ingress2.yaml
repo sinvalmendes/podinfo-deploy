@@ -5,14 +5,14 @@ metadata:
     kubernetes.io/ingress.class: traefik
     traefik.frontend.rule.type: PathPrefixStrip
   creationTimestamp: null
-  name: podinfo
+  name: metrics
   namespace: dev2
 spec:
   rules:
   - http:
       paths:
       - backend:
-          serviceName: podinfo
+          serviceName: metrics
           servicePort: 3000
         path: /
 status:
